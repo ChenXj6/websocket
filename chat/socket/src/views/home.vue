@@ -49,8 +49,8 @@ export default {
       state.msg = ''
     }
     const handleMessage = (msg) => {
-      console.log(msg)
-      // state.msgList.push(JSON.parse(msg.data))
+      // console.log(msg)
+      state.msgList.push(JSON.parse(msg.data))
     }
     const ws = useWebSocket(handleMessage)
     onMounted(() => {
